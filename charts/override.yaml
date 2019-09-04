@@ -3,30 +3,30 @@
 # Replace <jenkins password>, <nexus password> and <grafana password> with your own
 # Use this file to install umbrella chart, e.g. helm install mychart --name mychart -f override.yaml
 
-apim-gw-cert-manager: &acmeEmail "apimsandbox1@gmail.com"                                       # Email of your google account for your cluster, e.g. example@gmail.com
-apim-gw-cert-manager: &certDomainName "*.stable1.apimgcp.com"             # Domain name of the cert to be generated, e.g. *.cluster1.example.com
+apim-gw-cert-manager: &acmeEmail "apimsandbox1@gmail.com"                 # Email of your google account for your cluster, e.g. example@gmail.com
+apim-gw-cert-manager: &certDomainName "*.sandbox2.apimgcp.com"             # Domain name of the cert to be generated, e.g. *.cluster1.example.com
 apim-gw-cert-manager: &prodCertificateName "prod"                         # Define the name of the certificate in your cluster
 apim-gw-cert-manager: &secretName "tls"                                   # Define the name of the key in your cluster, which is used by ingress later
 apim-gw-cert-manager: &stagingEnabled false                               # Generate staging level key
 apim-gw-cert-manager: &prodEnabled true                                   # Generate production level key
 apim-gw-cert-manager: null
 
-apim-gw-cicd: &nexusDockerHost "docker.stable1.apimgcp.com"               # Nexus docker repo hostname assigned
-apim-gw-cicd: &nexusHttpHost "nexus.stable1.apimgcp.com"                  # Nexus hostname assigned
-apim-gw-cicd: &nexusIp "apim-stable1-nexus-ip"                          # Nexus IP assigned
+apim-gw-cicd: &nexusDockerHost "docker.sandbox2.apimgcp.com"               # Nexus docker repo hostname assigned
+apim-gw-cicd: &nexusHttpHost "nexus.sandbox2.apimgcp.com"                  # Nexus hostname assigned
+apim-gw-cicd: &nexusIp "apim-sandbox2-nexus-ip"                          # Nexus IP assigned
 apim-gw-cicd: &jenkinsAdminPassword "QPdECPF79J"                  # Define admin password for Jenkins
 apim-gw-cicd: &nexusAdminPassword "b2ycT$^KJpg10Z%wXw7S"                      # Define admin password for Nexus
-apim-gw-cicd: &jenkinsHostName "jenkins.stable1.apimgcp.com"              # Jenkins hostname assigned
-apim-gw-cicd: &jenkinsIp "apim-stable1-jenkins-ip"                      # Jenkins IP assigned
+apim-gw-cicd: &jenkinsHostName "jenkins.sandbox2.apimgcp.com"              # Jenkins hostname assigned
+apim-gw-cicd: &jenkinsIp "apim-sandbox2-jenkins-ip"                      # Jenkins IP assigned
 apim-gw-cicd: null
 
 apim-service-metrics-runtime: &grafanaAdminPassword "Hj7klHJZKzyMu1zsAEL1iIaRqG5PMNOW8bKwF4fB"  # Define admin password for grafana
-apim-service-metrics-runtime: &grafanaHost "grafana.stable1.apimgcp.com"  # Grafana hostname assigned
-apim-service-metrics-runtime: &grafanaIP "apim-stable1-grafana-ip"      # Grafana IP assigned
+apim-service-metrics-runtime: &grafanaHost "grafana.sandbox2.apimgcp.com"  # Grafana hostname assigned
+apim-service-metrics-runtime: &grafanaIP "apim-sandbox2-grafana-ip"      # Grafana IP assigned
 apim-service-metrics-runtime: null
 
-apim-logs-runtime: &kibanaHost "kibana.stable1.apimgcp.com/*"             # Kibana hostname assigned
-apim-logs-runtime: &kibanaIp "apim-stable1-kibana-ip"                   # Kibana IP assigned
+apim-logs-runtime: &kibanaHost "kibana.sandbox2.apimgcp.com/*"             # Kibana hostname assigned
+apim-logs-runtime: &kibanaIp "apim-sandbox2-kibana-ip"                   # Kibana IP assigned
 apim-logs-runtime: null
 
 
