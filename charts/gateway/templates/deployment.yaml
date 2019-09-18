@@ -52,6 +52,16 @@ spec:
                 configMapKeyRef:
                   name: {{ template "gateway.fullname" . }}
                   key: accept.license
+            - name: SSG_ADMIN_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: gw-pm-credentials
+                  key: ssg-admin-username
+            - name: SSG_ADMIN_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: gw-pm-credentials
+                    key: ssg-admin-password
             - name: EXTRA_JAVA_ARGS
               valueFrom:
                 configMapKeyRef:

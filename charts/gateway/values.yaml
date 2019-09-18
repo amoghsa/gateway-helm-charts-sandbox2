@@ -72,6 +72,8 @@ afinity: {}
 gateway:
   heapSize: "3g"
   javaArgs: ""
+  adminUsername: "admin"
+  adminPassword: "password"
   license:
     value:
     accept: false
